@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="formulario.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Test de Depresión Estudiantil: Evalúa tu Estado</h1>
+    <fieldset>
+        <section id="formulario">
+            <form>
+                <div id="Edad">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="age" placeholder="Edad">
+                </div>
+
+                <div id="Presion_academica">
+                    <label for="academic_pressure">Presión académica:</label>
+                    <select id="academic_pressure" name="academic_pressure">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div id="Study_satisfaction">
+                    <label for="study_satisfaction">Satisfacción de estudio:</label>
+                    <select id="study_satisfaction" name="study_satisfaction">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div id="Habitos_alimenticios">
+                    <label for="dietary_habits">Hábitos alimenticios:</label>
+                    <select id="dietary_habits" name="dietary_habits">
+                        <option value="">No has seleccionado aún</option>
+                        <option value="Saludable">Saludable</option>
+                        <option value="Moderado">Moderado</option>
+                        <option value="No saludable">No saludable</option>
+                    </select>
+                </div>
+
+                <div id="pensamientos_suicidas">
+                    <label for="suicidal_thoughts">Pensamientos suicidas:</label>
+                    <select id="suicidal_thoughts" name="suicidal_thoughts">
+                        <option value="">No has seleccionado aún</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <div id="tiempo_de_estudio_o_trabajo">
+                    <label for="work_study_hours">Tiempo de estudio o trabajo (horas):</label>
+                    <input type="number" id="work_study_hours" name="work_study_hours" placeholder="Horas de estudio o trabajo">
+                </div>
+
+                <div id="Estres_financiero">
+                    <label for="financial_stress">Estrés financiero:</label>
+                    <select id="financial_stress" name="financial_stress">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div id="button">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+
+        <div id="imagen">
+            <img src="disney_inside_out_sadness_sticker-removebg-preview.png" alt="Imagen de tristeza">
+        </div>
+    </fieldset>
+
+</body>
+</html>

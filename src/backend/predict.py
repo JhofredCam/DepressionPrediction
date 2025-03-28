@@ -20,6 +20,5 @@ def predict(value: pd.DataFrame):
     value.columns = ['Age', 'Academic Pressure', 'Study Satisfaction', 'Dietary Habits',
        'Have you ever had suicidal thoughts ?', 'Work/Study Hours',
        'Financial Stress']
-    
     model: GradientBoostingClassifier = joblib.load("./models/gb_depression.pkl")
     return model.predict(value)

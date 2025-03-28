@@ -5,6 +5,7 @@ import pandas as pd
 from fastapi import FastAPI
 from preprocessing import Pipeline
 from predict import predict
+from fastapi.middleware.cors import CORSMiddleware
 
 class Params(BaseModel):
     age : int
@@ -19,6 +20,14 @@ class Params(BaseModel):
         return pd.DataFrame([self.model_dump()])
     
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://127.0.0.1:5500"],  # Puedes restringirlo a dominios específicos
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post('/')
 async def evaluate(params : Params) -> int:
