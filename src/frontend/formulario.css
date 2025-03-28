@@ -4,7 +4,7 @@
     --secondary_color: #c4d7ff;
     --text_color: #646464;
 
-    --font: 'Candara', sans-serif;
+    --font: 'Monserrat', sans-serif;
 }
 
 body{
@@ -23,6 +23,7 @@ h1{
     width: 100%;
     margin: auto;
     padding: 1vh;
+    font-family: var(--font);
 
 }
 input{
@@ -93,5 +94,20 @@ fieldset{
     border: none;
     display: flex;
     flex-direction: row;
+}
+
+.hidden {
+    display: none;
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--principal_color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px var(--secondary_color);
+    text-align: center;
+    font-size: 18px;
+    height: auto;
 }
 

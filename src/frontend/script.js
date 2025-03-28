@@ -1,9 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
+    const resultadoDiv = document.getElementById("resultado");
 
     form.addEventListener("submit", async function (event) {
-        event.preventDefault();  // Evita que la página se recargue
+        event.preventDefault(); // Evita el envío tradicional del formulario
 
+        // Capturar valores del formulario
+        
         const data = {
             age: parseInt(document.querySelector("input[placeholder='Edad']").value),
             academic_pressure: parseInt(document.querySelector("select[name='academic_pressure']").value),
@@ -22,10 +25,23 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             const result = await response.json();
-            alert("Depresión: " + JSON.stringify(result));
+            console.log(result)
+            if (!response.ok) {
+                throw new Error(result.mensaje || "Error en la solicitud");
+            }
+            if (result == 0){
+                 var text = "Vas bien, sigue cuidándote."
+                }else{
+                    var text = "Considera ayuda profesional." 
+                }
+
+            // Mostrar el resultado en el div
+            resultadoDiv.innerHTML = `${text}`;
+            resultadoDiv.classList.remove("hidden");
+
         } catch (error) {
-            console.error("Error al enviar datos:", error);
-            alert("Hubo un error al enviar los datos.");
+            resultadoDiv.innerHTML = `<strong>Error:</strong> ${error.message}`;
+            resultadoDiv.classList.remove("hidden");
         }
     });
 });
