@@ -100,7 +100,7 @@ Although XGBoost had a slightly higher F1 score and accuracy, Gradient Boosting 
 👤 **Juan Pablo Holguin** - *GitHub username pending*  
 
 ## 📝 License
-[MIT License](LICENSE) *(if applicable)*  
+[MIT License](LICENSE) 
 
 ---
 📢 **Let's make student mental health a priority!** 🚀
