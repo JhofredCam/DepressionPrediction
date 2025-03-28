@@ -26,24 +26,32 @@ By analyzing various factors such as study satisfaction, dietary habits, and wor
 
 ## Project Structure
 ```
-📂 models
-│   └── gb_depression.pkl  # Trained Gradient Boosting model
-📂 notebook
-│   ├── student_depression_analysis.ipynb  # Jupyter Notebook for analysis
-📂 src
-    📂 backend
-    │   ├── main.py  # API entry point
-    │   ├── predict.py  # Model inference
-    │   ├── preprocessing.py  # Data transformation
-    📂 frontend
-    │   ├── disney_inside_out_sadness_sticker.png
-    │   ├── formulario.css
-    │   ├── formulario.html
-    │   └── script.js
+📂 DepressionPrediction
+│
+├── 📁 models
+│   └── 📄 gb_depression.pkl  # Trained Gradient Boosting model
+│
+├── 📁 notebook
+│   └── 📄 student_depression_analysis.ipynb  # Jupyter Notebook for analysis
+│
+├── 📁 src
+│   ├── 📁 backend
+│   │   ├── 📄 main.py  # API entry point
+│   │   ├── 📄 predict.py  # Model inference
+│   │   ├── 📄 preprocessing.py  # Data transformation
+│   │
+│   ├── 📁 frontend
+│   │   ├── 🖼️ disney_inside_out_sadness_sticker-removebg-preview.png
+│   │   ├── 🎨 formulario.css
+│   │   ├── 📄 formulario.html
+│   │   └── 📜 script.js
+│
+├── 📄 environment.yml  # Conda environment configuration
+├── 📄 README.md  # Project documentation
 ```
 
 ## How to Run
-- The backend dependencies are listed in `requirements.xml` and `requirements.txt`.
+- The backend conda environment is in `environment.yml`.
 - The notebook was executed on **Google Colab**.
 - **Conda** was used as the virtual environment for the backend.
 
